@@ -2,10 +2,10 @@ FROM gudaoxuri/java:latest
 MAINTAINER gudaoxuri
 
 #---------------Install Scala---------------
-RUN wget -P /opt/env/ http://downloads.typesafe.com/scala/2.11.7/scala-2.11.7.tgz  && \
-    tar -xzf /opt/env/scala-2.11.7.tgz -C /opt/env/  && \
-    rm /opt/env/scala-2.11.7.tgz  && \
-    mv /opt/env/scala-2.11.7 /opt/env/scala  && \
+RUN wget -P /opt/env/ http://downloads.typesafe.com/scala/2.11.12/scala-2.11.12.tgz  && \
+    tar -xzf /opt/env/scala-2.11.12.tgz -C /opt/env/  && \
+    rm /opt/env/scala-2.11.12.tgz  && \
+    mv /opt/env/scala-2.11.12 /opt/env/scala  && \
     echo "export SCALA_HOME=/opt/env/scala" >> /etc/profile
 ENV SCALA_HOME /opt/env/scala
 
